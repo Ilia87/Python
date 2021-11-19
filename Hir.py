@@ -123,7 +123,7 @@ def array_search(A: list, N: int, x: int):
     return -1
 
 def test_array_search():
-    A1 = [1,5565,4677,4,5]
+    A1 = [1,5565,4677,4,456]
     m = array_search(A1, 5, 555)
     if m == 1:
         print("#test1 - ok")
