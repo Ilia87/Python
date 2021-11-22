@@ -7,7 +7,7 @@ b = float(input('your second namber: '))
 
 if what == '+':
 	c = a + b
-	print('Result ' + str(c))
+	print(f'Result {c}')
 elif what == '-':
 	c = a - b
 	print('Result ' + str(c))

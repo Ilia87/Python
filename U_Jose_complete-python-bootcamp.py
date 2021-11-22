@@ -37,13 +37,16 @@
 # c=c*2
 # print(c)
 
-c = 'The {v} {n} {d}'
-print(c.format(v='very', n='nice', d='day',))
+# c = 'The {v} {n} {d}'
+# print(c.format(v='very', n='nice', d='day',))
+#
+# b = 'The {} {} {}'
+# print(b.format('very', 'nice', 'day',))
+#
+# q= 100
+# w = 45
+# result = q/w
+# print(result)
 
-b = 'The {} {} {}'
-print(b.format('very', 'nice', 'day',))
-
-q= 100
-w = 45
-result = q/w
-print(result)
+x, y = input('your name: '), float(input('your age: '))
+print("I'm %s and my age is %d years old.\nHowever age is %5.4f" % (x, y, y))
