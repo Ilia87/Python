@@ -22,3 +22,7 @@ print(a[::-1], ' a[::-1]')
 print(a[::-2], ' a[::-2]')
 print(a[:2], ' a[:2]')
 print(a[2:], ' a[2:]')
+
+b = 'tinker'
+print(b[1:4])
+print(b[-5:-2])
