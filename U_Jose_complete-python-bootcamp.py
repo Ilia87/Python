@@ -48,5 +48,29 @@
 # result = q/w
 # print(result)
 
-x, y = input('your name: '), float(input('your age: '))
-print("I'm %s and my age is %d years old.\nHowever age is %5.4f" % (x, y, y))
+# x, y = input('your name: '), float(input('your age: '))
+# print("I'm %s and my age is %d years old.\nHowever age is %5.4f" % (x, y, y))
+# 
+
+old_list = [1, 2, 3, 4, 5, 6]
+print(old_list)
+print(len(old_list))
+print(old_list[0])
+new_list = old_list[:]
+new_list.append(7)
+print(new_list)
+new_list2 = new_list.copy()
+new_list2.pop(0)
+print(new_list2)
+print(old_list + new_list)
+big_list = old_list[:] + new_list.copy()
+print(big_list)
+big_list.sort()
+print(big_list)
+big_list.reverse()
+print(big_list)
+matrix = [old_list, new_list, new_list2, big_list]
+print(matrix)
+print(matrix[3])
+first_col = [row[0] for row in matrix]
+print(first_col[1:])
