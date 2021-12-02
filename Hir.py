@@ -27,27 +27,27 @@
 # 	print('C')
 # else:
 # 	print('D')
-# 	
+#
 
 
-# z = 0o4575154
-# print (z)
+#z = 0o4575154
+ print (z)
 
-# x=1
-# while x < 24:
+ x=1
+ while x < 24:
 
-# 	print(x, end=',')
-# 	x *= 2
-# for i in range(20, 10, -2):
-#    print(i, end=',')
+ 	print(x, end=',')
+ 	x *= 2
+for i in range(20, 10, -2):
+    print(i, end=',')
 
-# def max2(x, y):
-# 	if x > y:
-# 		return x
-# 	return y
-# def max6(x,y,z,a,b,c):
-# 	return max2(x,max2(y, max2(z, max2(a, max2(b, c)))))
-# print(max6(5,8,1222,525252,45,1))
+ def max2(x, y):
+ 	if x > y:
+ 		return x
+ 	return y
+ def max6(x,y,z,a,b,c):
+ 	return max2(x,max2(y, max2(z, max2(a, max2(b, c)))))
+ print(max6(5,8,1222,525252,45,1))
 
 # def hello_separated(name="World", separator="-"):
 #     print("Hello", name, sep=separator)
