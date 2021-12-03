@@ -77,30 +77,30 @@
 
 # Dictionaries
 
-# d = {'c1': ['a', 'b', 'c', 'd', 'e'], 'c2': [1, 2, 3, 4, 5], 'c3': {'c3_1': ['z', 'x']}}
-# print(d)
-# print(d.keys())
-# print(d.values())
-# print(d.items())
-# print(d['c3']['c3_1'][1])
-# d['c3']['c3_1'][1] = 'g'
-# print(d['c3']['c3_1'][1])
-# d['c3']['c3_1'][1].upper()
-# print(d['c3']['c3_1'][1])
-# d['c2'] += {'name'}
-# # d['c2']['name'] = {}
-#
-# print(d)
-# print(d['c2'])
-# print(d.items())
-# list = list(d.items())
-# list1 = [1,1,2,2,3,4,5,6,1,1]
-# print(list1)
-# set(list1)
-# print(set(list1))
-# x=set(list1)
-# x.remove(2)
-# print(x)
+d = {'c1': ['a', 'b', 'c', 'd', 'e'], 'c2': [1, 2, 3, 4, 5], 'c3': {'c3_1': ['z', 'x']}}
+print(d)
+print(d.keys())
+print(d.values())
+print(d.items())
+print(d['c3']['c3_1'][1])
+d['c3']['c3_1'][1] = 'g'
+print(d['c3']['c3_1'][1])
+d['c3']['c3_1'][1].upper()
+print(d['c3']['c3_1'][1])
+d['c2'] += {'name'}
+# d['c2']['name'] = {}
+
+print(d)
+print(d['c2'])
+print(d.items())
+list = list(d.items())
+list1 = [1,1,2,2,3,4,5,6,1,1]
+print(list1)
+set(list1)
+print(set(list1))
+x=set(list1)
+x.remove(2)
+print(x)
 
 # with open('myfile.txt', mode = 'w+') as f:
 #     f.write('1th line')
@@ -110,5 +110,5 @@
 #     with open('myfile.txt', mode='a') as f:
 #         f.write('\nstr(i)'+'sdfwdsfsdfsdfds')
 
-with open('myfile.txt', mode='r') as f:
-    print(f.read())
+# with open('myfile.txt', mode='r') as f:
+#     print(f.read())
