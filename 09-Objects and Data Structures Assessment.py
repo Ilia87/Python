@@ -21,19 +21,37 @@
 # list3 = [1,2,[3,4,'hello']]
 # print(list3[2])
 # print(list3[2][2])
+# list3[2][2] = 'goodbye'
+# print(list3)
 # list3[2].pop(2)
 # print(list3)
 # list3[2].append('goodbye')
 # print(list3)
-
+#
 d = {'simple_key':'hello'}
 print(d['simple_key'])
 d2 = {'k1':{'k2':'hello'}}
 print(d2['k1']['k2'])
 d3 = {'k1':[{'nest_key':['this is deep',['hello']]}]}
+print(d3['k1'][0]['nest_key'][1][0])
 d3['k1'][0]['nest_key'][1] = 'hello'
 print(d3['k1'][0]['nest_key'][1])
 print(d3.keys())
 d4 = {'k1':[1,2,{'k2':['this is tricky',{'tough':[1,2,['hello']]}]}]}
 d4['k1'][2]['k2'][1]['tough'][2] = 'hello'
 print(d4['k1'][2]['k2'][1]['tough'][2])
+#
+# list5 = [1,2,2,33,4,4,11,22,3,3,2]
+# list5.sort()
+#
+# x = set(list5)
+# print(x)
+#
+# # two nested lists
+# l_one = [1,2,[3,4]]
+# l_two = [1,2,{'k1':4}]
+#
+# # True or False?
+# print(l_one[2][0] <= l_two[2]['k1'])
+#
+#
