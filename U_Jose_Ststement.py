@@ -2,11 +2,12 @@
 #
 # for i in list1:
 #     # Check for even
-#     if i % 2 == 0:
+#     if i == 6:
+#         continue
+#     elif i % 2 == 0:
 #         print(i)
 #     else:
-#         pass
-#     print(f'Odd Number: {i}')
+#         print(f'Odd Number: {i}')
 
 # list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # list_sum = 1
@@ -22,11 +23,49 @@
 # for i in tup:
 #     print(i)
 #
-list3 = [(1,2,3), (4,5,6), (7,8,9), (10,11,12)]
-print(len(list3))
+# list3 = [(1,2,3), (4,5,6), (7,8,9), (10,11,12)]
+# print(len(list3))
+#
+# for a, b, c in list3:
+#     print(a)
+#     print(b)
+#     print(c)
 
-for a, b, c in list3:
-    print(a)
-    print(b)
-    print(c)
-    # print(b)
+# d = {'k1': 1, 'k2': 2, 'k3': 3}
+# for i in d.values():
+#     for s in d.items():
+#         print(f'{i} and {s}')
+
+
+# x = 0
+# y = 10
+# z = 1
+# while x <= y:
+#     print(f'{x} from {y}')
+#     with open(f'C:\\Users\\Ilia_Vekkerle\\Documents\\{x} from {y}.txt', mode='w+') as f:
+#         f.write(f'{x} from {y}')
+#         # f.write(f'{list(map(chr, range(1, 250)))}')
+#     if x == y:
+#         print('it is the end')
+#         with open(f'C:\\Users\\Ilia_Vekkerle\\Documents\\it is the end {x} from {y}.txt', mode='w+') as f:
+#             f.write(f'it is the end{x} from {y}')
+#     else:
+#         print(f'next value is {x+z}')
+#     x += z
+
+# index_count = 0
+# word = 'Vekkerle'
+# for letter in word:
+#     print(f'at index {index_count} the letter is {letter}')
+#     index_count += 1
+#
+# for i,l in enumerate(word):
+#     print(f'{i} is {l}')
+
+list1 = list(range(1,27,1))
+list2 = list(map(chr, range(ord('a'), ord('z')+1)))
+list3 = list(map(chr, range(ord('а'), ord('я')+1)))
+
+
+for i in zip(list1, list2, list3):
+    print(i)
