@@ -53,23 +53,23 @@
 #         print(f'next value is {x+z}')
 #     x += z
 
-index_count = 0
-word = 'Vekkerle'
-for letter in word:
-    print(f'at index {index_count} the letter is {letter}')
-    index_count += 1
+# index_count = 0
+# word = 'Vekkerle'
+# for letter in word:
+#     print(f'at index {index_count} the letter is {letter}')
+#     index_count += 1
+# #
+# for i,l in enumerate(word):
+#     print(f'{i} is {l}')
 #
-for i,l in enumerate(word):
-    print(f'{i} is {l}')
-
-list1 = list(range(1,27,1))
-list2 = list(map(chr, range(ord('a'), ord('z')+1)))
-list3 = list(map(chr, range(ord('а'), ord('я')+1)))
-#
-#
-for i in zip(list1, list2, list3):
-    print(i)
-print(list(zip(list1, list2, list3)))
+# list1 = list(range(1,27,1))
+# list2 = list(map(chr, range(ord('a'), ord('z')+1)))
+# list3 = list(map(chr, range(ord('а'), ord('я')+1)))
+# #
+# #
+# for i in zip(list1, list2, list3):
+#     print(i)
+# print(list(zip(list1, list2, list3)))
 
 # list1 = list(range(1,101,1))
 # print(min(list1))
@@ -78,3 +78,18 @@ print(list(zip(list1, list2, list3)))
 # from random import shuffle
 # shuffle(list1)
 # print(list1)
+
+
+list1 = []
+st = 'Print only the words that start with s in this sentence'
+for i in st.split(" "):
+    list1.append(i)
+print(list1)
+for w in list1:
+    if "s" in w[0]:
+        print(w[::-1])
+
+
+     # if "s" in i[0]:
+     #     print(i)
+
