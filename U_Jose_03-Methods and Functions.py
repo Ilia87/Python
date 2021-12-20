@@ -155,30 +155,43 @@
 #
 # almost_there(209)
 
-def has_33(nums):
-    list_n = []
-    for n in range(1, len(nums)+1):
-        list_n.append(n)
-    # print(list_n)
-    lisrd = []
-    for i in nums:
-        lisrd.append(i == 3 and nums[nums[i]-1] == 1 or i == 3 and nums[nums[i]+1] == 1)
-    # print(lisrd)
-    # print(nums)
-    list_f = list(zip(list_n, nums, lisrd))
-    # print(list_f)
-    for i0, i1, i2 in  list_f:
-        print(f'в проверке № {i0}, число {i1} и вот результат {i2}')
+# def has_33(nums):
+#     list_n = []
+#     for n in range(1, len(nums)+1):
+#         list_n.append(n)
+#     # print(list_n)
+#     lisrd = []
+#     for i in nums:
+#         lisrd.append(i == 3 and nums[nums[i]-1] == 1 or i == 3 and nums[nums[i]+1] == 1)
+#     # print(lisrd)
+#     # print(nums)
+#     list_f = list(zip(list_n, nums, lisrd))
+#     # print(list_f)
+#     for i0, i1, i2 in  list_f:
+#         print(f'в проверке № {i0}, число {i1} и вот результат {i2}')
+#
+# gu = [1, 3, 1, 3, 1, 7, 1, 3, 6, 7, 1, 3, 3, 1, 3, 1, 6, 7, 1, 3, 3, 1, 6, 7, 9]
+#
+# def has_3(nyms):
+#     for i in range(0, len(nyms)-1):
+#         # print(nyms[i:i+1] == [3,3] or nyms[i-1:i] == [3,3])
+#         if nyms[i:i + 2] == [3, 3]:
+#             print(True)
+#         print(False)
+#
+# has_33(gu)
+# has_3(gu)
 
-gu = [1, 3, 1, 3, 1, 7, 1, 3, 6, 7, 1, 3, 3, 1, 3, 1, 6, 7, 1, 3, 3, 1, 6, 7, 9]
+gu = (1, 3, 1, 3, 1, 7, 1, 3, 6, 7, 1, 3, 3, 1, 3, 1, 6, 7, 1, 3, 3, 1, 6, 7, 9)
+def myfunc(*args):
+    output = []
+    for n in args:
+        if n % 2 == 0:
+            output.append(n)
+        else:
+            pass
+    print(output)
+    return output
 
-def has_3(nyms):
-    for i in range(0, len(nyms)-1):
-        # print(nyms[i:i+1] == [3,3] or nyms[i-1:i] == [3,3])
-        if nyms[i:i + 2] == [3, 3]:
-            print(True)
-        print(False)
-
-has_33(gu)
-has_3(gu)
+myfunc(gu)
 
