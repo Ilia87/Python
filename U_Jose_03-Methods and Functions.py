@@ -148,7 +148,7 @@
 #     text2 = " ".join(text2.split()[::-1])
 #     print(text2)
 # rev_t2('We are ready')
-#
+# #
 # def almost_there(n):
 #     print (n > 10 and n < 100 or n>200)
 #     print((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
@@ -182,16 +182,31 @@
 # has_33(gu)
 # has_3(gu)
 
-gu = (1, 3, 1, 3, 1, 7, 1, 3, 6, 7, 1, 3, 3, 1, 3, 1, 6, 7, 1, 3, 3, 1, 6, 7, 9)
-def myfunc(*args):
-    output = []
-    for n in args:
-        if n % 2 == 0:
-            output.append(n)
+# gu = [(1, 3, 1, 3, 1, 7, 1, 3, 6, 7, 1, 3, 3, 1, 3, 1, 6, 7, 1, 3, 3, 1, 6, 7, 9)]
+# def myfunc(*args):
+#     output = []
+#     # out = [item for n1 in args for item in n1]
+#     for n in args:
+#         if n % 2 == 0:
+#             output.append(n)
+#         else:
+#             pass
+#     print(output)
+#     return output
+#
+# myfunc(1, 3, 1, 3, 1, 7, 1, 3, 6, 7, 1, 3, 3, 1, 3, 1, 6, 7, 1, 3, 3, 1, 6, 7, 9)
+
+name = 'anthropomorphism'
+
+
+def my_func(st):
+    new = []
+    for index in range(len(st)):
+        if index % 2 == 0:
+            new.append(st[index].lower())
         else:
-            pass
-    print(output)
-    return output
+            new.append(st[index].upper())
+    word = ''.join(new)
+    print(word)
 
-myfunc(gu)
-
+my_func(name)
