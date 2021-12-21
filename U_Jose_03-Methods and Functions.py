@@ -196,17 +196,59 @@
 #
 # myfunc(1, 3, 1, 3, 1, 7, 1, 3, 6, 7, 1, 3, 3, 1, 3, 1, 6, 7, 1, 3, 3, 1, 6, 7, 9)
 
+# name = 'anthropomorphism'
+
+#
+# def my_func(st):
+#     new = []
+#     for index in range(len(st)):
+#         if index % 2 == 0:
+#             new.append(st[index].lower())
+#         else:
+#             new.append(st[index].upper())
+#     word = ''.join(new)
+#     print(word)
+#
+# my_func(name)
+
 name = 'anthropomorphism'
 
-
-def my_func(st):
-    new = []
-    for index in range(len(st)):
+def my_func(word):
+    list_word = []
+    for index in range(0,len(word)):
         if index % 2 == 0:
-            new.append(st[index].lower())
+            list_word.append(word[index].lower())
         else:
-            new.append(st[index].upper())
-    word = ''.join(new)
-    print(word)
+            list_word.append(word[index].upper())
+    print(list_word)
+    new_word = ''
+    for l in list_word:
+        new_word += l
+    print(new_word)
 
 my_func(name)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
