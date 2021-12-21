@@ -211,44 +211,40 @@
 #
 # my_func(name)
 
-name = 'anthropomorphism'
+# name = 'anthropomorphism'
 
-def my_func(word):
-    list_word = []
-    for index in range(0,len(word)):
-        if index % 2 == 0:
-            list_word.append(word[index].lower())
-        else:
-            list_word.append(word[index].upper())
-    print(list_word)
-    new_word = ''
-    for l in list_word:
-        new_word += l
-    print(new_word)
+# def my_func(word):
+#     list_word = []
+#     for index in range(0,len(word)):
+#         if index % 2 == 0:
+#             list_word.append(word[index].lower())
+#         else:
+#             list_word.append(word[index].upper())
+#     new_word = ''
+#     for l in list_word:
+#         new_word += l
+#     return (new_word)
+#
+# my_func(name)
 
-my_func(name)
+# Given a sentence, return a sentence with the words reversed
+# master_yoda('I am home') --> 'home am I'
+# master_yoda('We are ready') --> 'ready are We'
+# Check
+# master_yoda('I am home')
+# Check
+# master_yoda('We are ready')
 
+def text_rev(text):
+    list_text = []
+    text_tmp = text.split(" ")
+    for index in range(len(text_tmp)-1, -1, -1):
+        list_text.append(text_tmp[index])
+    for index1 in range(len(text_tmp)):
+        list_text.append(index1)
+    text_tmp2 = ' '.join(text.split(" ")[::-1])
+    print(text_tmp)
+    print(text_tmp2)
+    print(list_text)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+text_rev('I am home and it is great')
