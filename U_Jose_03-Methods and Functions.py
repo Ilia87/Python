@@ -113,15 +113,15 @@
 # check(55555555555555555,20)
 
 # def old_macdonald(name):
-    # new_name = ''
-    # list_mac = list(name)
-    # list_mac.pop(3)
-    # list_mac.insert(3,"D")
-    # list_mac.pop(0)
-    # list_mac.insert(0,"M")
-    # for l in list_mac:
-    #     new_name +=l
-    # print(new_name)
+# new_name = ''
+# list_mac = list(name)
+# list_mac.pop(3)
+# list_mac.insert(3,"D")
+# list_mac.pop(0)
+# list_mac.insert(0,"M")
+# for l in list_mac:
+#     new_name +=l
+# print(new_name)
 
 # def old_macdonald(name):
 #     if len(name)>4:
@@ -235,16 +235,148 @@
 # Check
 # master_yoda('We are ready')
 
-def text_rev(text):
-    list_text = []
-    text_tmp = text.split(" ")
-    for index in range(len(text_tmp)-1, -1, -1):
-        list_text.append(text_tmp[index])
-    for index1 in range(len(text_tmp)):
-        list_text.append(index1)
-    text_tmp2 = ' '.join(text.split(" ")[::-1])
-    print(text_tmp)
-    print(text_tmp2)
-    print(list_text)
+# def text_rev(text):
+#     list_text = []
+#     text_tmp = text.split(" ")
+#     for index in range(len(text_tmp) - 1, -1, -1):
+#         list_text.append(text_tmp[index])
+#         text_r = ' '.join(list_text)
+#     # for index1 in range(len(text_tmp)):
+#     #     list_text.append(index1)
+#     text_tmp2 = ' '.join(text.split(" ")[::-1])
+#     print(text_tmp)
+#     print(text_tmp2)
+#     print(list_text)
+#     print(text_r)
+#
+#
+# text_rev('I am home and it is great')
 
-text_rev('I am home and it is great')
+# def almost_there(n):
+#     print(10 < n < 100 or n > 200)
+# almost_there(201)
+
+# list_c = [1, 3, 1, 3, 1, 7, 1, 3, 6, 7, 1, 3, 3, 3, 1, 3, 1, 6, 7, 1, 3, 3, 1, 6, 7, 9]
+
+# def has_33(list_1):
+#     list_number = []
+#     list_check = []
+#     for index in range(len(list_1)):
+#         list_check.append(list_1[index] == list_1[index - 1] == list_1[index + 1] == 3)
+#         list_number.append(index)
+#     tuple_finish = list(zip(list_number,list_1, list_check))
+#     # print(tuple_finish)
+#     for i0, i1, i2, in tuple_finish:
+#         print(f'checking #{i0} for number {i1} is {i2}')
+#
+#
+# has_33(list_c)
+#
+# def paper_doll(word):
+#     list_word=[]
+#     for l in word:
+#         list_word.append(l*3)
+#     word_doll1 = ''.join(list_word) # Using .join() method
+#     word_doll2 = ''.join(map(str,list_word)) # Use map() method for mapping str (for converting elements in list to string) with given iterator, the list.
+#     word_doll3 = ''.join([str(le) for le in list_word]) # Using list comprehension
+#     print(list_word)
+#     print(word_doll1)
+#     print(word_doll2)
+#     print(word_doll3)
+#
+# paper_doll('Hello')
+
+
+# tup1 = (5,6,7)
+# tup2 = (9,9,9)
+# tup3 = (9,9,11)
+# tup4 = (9,50,11)
+# def blackjack(integers):
+#     if sum(integers)<=21:
+#         print(sum(integers))
+#     elif sum (integers) <= 31 and integers[0] == 11 or  integers[1] == 11 or  integers[2] == 11:
+#         print(sum(integers) - 10)
+#     else:
+#         print('BUST')
+#
+# blackjack(tup1)
+# blackjack(tup2)
+# blackjack(tup3)
+# blackjack(tup4)
+#
+# def summer_69(array):
+#     list_array = []
+#     for n in array:
+#         if n <> 6
+
+# t = 'Pilaf'
+# def plof(text):
+#     text1 = text.capitalize()[::-1]
+#     print(text1)
+# # plof(t)
+#
+# list_1 = [4, 5, 6, 7, 8, 9, 45, 11, 6, 5, 9, 11, 2]
+#
+# def sum_69(array):
+#     array_n = []
+#     array_i = []
+#     for index, n in enumerate(array,0):
+#         array_i.append(index)
+#         array_n.append(n)
+#     list_f = list(zip(array_i, array_n))
+#     print(array_i)
+#     print(array_n)
+#     print(list_f)
+#
+# sum_69(list_1)
+#
+# def sum_69_1(array):
+#     array_n = []
+#     array_i = []
+#     for index, n in enumerate(array, 0):
+#         if n == 6:
+#             continue
+#         array_i.append(index)
+#         array_n.append(n)
+#         list_f1 = list(zip(array_i, array_n))
+#     print(array_i)
+#     print(array_n)
+#     print(list_f1)
+#
+# sum_69_1(list_1)
+
+
+
+#  Return the sum of the numbers in the array,
+#  except ignore sections of numbers starting
+#  with a 6 and extending to the next 9
+#  (every 6 will be followed by at least one 9). Return 0 for no numbers.
+list_1 = [4, 5, 6, 7, 8, 9, 1, 11, 6, 5, 9, 11, 2]
+def sum_69_2(array):
+    array_sum = 0
+    array_l_not_sum = []
+    add = True
+    array_l = []
+    for n in array:
+        while add:
+            if n != 6:
+                array_sum +=n
+                array_l.append(n)
+                break
+            else:
+                add = False
+        while not add:
+            if n != 9:
+                array_l_not_sum.append(n)
+                break
+            else:
+                array_l_not_sum.append(n)
+                add = True
+                break
+    print(array_sum)
+    print(array_l)
+    print(array_l_not_sum)
+
+
+print(list_1)
+sum_69_2(list_1)
