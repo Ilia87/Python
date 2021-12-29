@@ -185,7 +185,8 @@ V_DATA_CONSO_Доли_и_методы_BRD_project:
  FROM $(vDataTier4)\Macro_CONSO\V_DATA_CONSO_Доли и методы.qvd (qvd) ; 
 
 Concatenate(V_DATA_CONSO_Доли_и_методы_BRD_project)
- LOAD [%Контрагент ID], 
+ LOAD 
+ [%Контрагент ID], 
  [%Компания ID], 
  [%Тип данных ID], 
  [%Вид деятельности ID], 

@@ -351,32 +351,74 @@
 #  except ignore sections of numbers starting
 #  with a 6 and extending to the next 9
 #  (every 6 will be followed by at least one 9). Return 0 for no numbers.
-list_1 = [4, 5, 6, 7, 8, 9, 1, 11, 6, 5, 9, 11, 2]
-def sum_69_2(array):
-    array_sum = 0
-    array_l_not_sum = []
-    add = True
-    array_l = []
-    for n in array:
-        while add:
-            if n != 6:
-                array_sum +=n
-                array_l.append(n)
-                break
-            else:
-                add = False
-        while not add:
-            if n != 9:
-                array_l_not_sum.append(n)
-                break
-            else:
-                array_l_not_sum.append(n)
-                add = True
-                break
-    print(array_sum)
-    print(array_l)
-    print(array_l_not_sum)
+# list_1 = [4, 5, 6, 7, 8, 9, 1, 11, 6, 5, 9, 11, 2]
+# def sum_69(array):
+#     list_sum =[]
+#     list_not_sum = []
+#     add = True
+#     for n in array:
+#         while add:
+#             if n != 6:
+#                 list_sum.append(n)
+#                 break
+#             else:
+#                 list_not_sum.append(n)
+#                 add = False
+#                 break
+#         while not add:
+#             if n != 9:
+#                 list_not_sum.append(n)
+#                 break
+#             else:
+#                 add = True
+#     print(list_sum)
+#     print(list_not_sum)
+#
+# print(list_1)
+# sum_69(list_1)
 
 
-print(list_1)
-sum_69_2(list_1)
+def spy_game(nums):
+    list_spy =[]
+    check = 1
+    for num in nums:
+        while check == 1:
+            if num != 0:
+                break
+            else:
+                list_spy.append(num)
+                check = 2
+                break
+        while check == 2:
+            if num != 0:
+                break
+            else:
+                list_spy.append(num)
+                check = 3
+                break
+        while check == 3:
+            if num != 7:
+                break
+            else:
+                list_spy.append(num)
+                check = 4
+                break
+    print(''.join(map(str, list_spy))=='007')
+
+def spy_game_solution(nums):
+    code = [0,0,7,'x']
+    for num in nums:
+        if num == code[0]:
+            code.pop(0)
+            print(code)
+    print(len(code)==1)
+
+
+
+spy_game([1, 2, 4, 0, 0, 9, 5, 0, 2, 4, 0, 5, 5])
+spy_game([1, 7, 0, 2, 4, 0, 5, 7])
+spy_game([1, 7, 2, 8, 2, 4, 8, 5, 7, 0, 4, 5, 0,0,7])
+
+spy_game_solution([1, 2, 4, 0, 0, 9, 5, 0, 2, 4, 0, 5, 5])
+spy_game_solution([1, 7, 0, 2, 4, 0, 5, 7])
+spy_game_solution([1, 7, 2, 8, 2, 4, 8, 5, 7, 0, 4, 5, 0,0,7])
