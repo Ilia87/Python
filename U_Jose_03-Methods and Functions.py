@@ -377,48 +377,153 @@
 # print(list_1)
 # sum_69(list_1)
 
+# SPY GAME: Write a function that takes in a list of integers
+# and returns True if it contains 007 in order
+# def spy_game(nums):
+#     list_spy =[]
+#     check = 1
+#     for num in nums:
+#         while check == 1:
+#             if num != 0:
+#                 break
+#             else:
+#                 list_spy.append(num)
+#                 check = 2
+#                 break
+#         while check == 2:
+#             if num != 0:
+#                 break
+#             else:
+#                 list_spy.append(num)
+#                 check = 3
+#                 break
+#         while check == 3:
+#             if num != 7:
+#                 break
+#             else:
+#                 list_spy.append(num)
+#                 check = 4
+#                 break
+#     print(''.join(map(str, list_spy))=='007')
+#
+# def spy_game_solution(nums):
+#     code = [0,0,7,'x']
+#     for num in nums:
+#         if num == code[0]:
+#             code.pop(0)
+#             print(code)
+#     print(len(code)==1)
+#
+#
+#
+# spy_game([1, 2, 4, 0, 0, 9, 5, 0, 2, 4, 0, 5, 5])
+# spy_game([1, 7, 0, 2, 4, 0, 5, 7])
+# spy_game([1, 7, 2, 8, 2, 4, 8, 5, 7, 0, 4, 5, 0,0,7])
+#
+# spy_game_solution([1, 2, 4, 0, 0, 9, 5, 0, 2, 4, 0, 'x', 5])
+# spy_game_solution([1, 7, 0, 2, 4, 0, 5, 7])
+# spy_game_solution([1, 7, 2, 8, 2, 4, 8, 5, 7, 0, 4, 5, 0,0,7])
 
-def spy_game(nums):
-    list_spy =[]
-    check = 1
-    for num in nums:
-        while check == 1:
-            if num != 0:
-                break
-            else:
-                list_spy.append(num)
-                check = 2
-                break
-        while check == 2:
-            if num != 0:
-                break
-            else:
-                list_spy.append(num)
-                check = 3
-                break
-        while check == 3:
-            if num != 7:
-                break
-            else:
-                list_spy.append(num)
-                check = 4
-                break
-    print(''.join(map(str, list_spy))=='007')
+# COUNT PRIMES: Write a function that returns the number of prime numbers
+# that exist up to and including a given number
 
-def spy_game_solution(nums):
-    code = [0,0,7,'x']
-    for num in nums:
-        if num == code[0]:
-            code.pop(0)
-            print(code)
-    print(len(code)==1)
+# def count_primes(one_num):
+#     list_nums = []
+#     list_nums_prime = []
+#     count_el = 0
+#     a = 2
+#     for index in range(2,one_num):
+#         list_nums.append(index)
+#         if (a ** (index - 1)) % index == 1 and a % index != 0:
+#             list_nums_prime.append(index)
+#     for el in list_nums_prime:
+#         count_el += 1
+#
+#
+#     # print(list_nums)
+#     print(list_nums_prime)
+#     print(len(list_nums_prime))
+#     print(count_el)
+#
+#
+# count_primes(100)
+from typing import Dict, Any
 
 
+# def prime(one_num):
+#     list_primes = []
+#     list_check_x = []
+#     list_check_y = []
+#     x = 3
+#     while x <= one_num:
+#         list_check_x.append(x)
+#         print(f'operator {x}')
+#         for y in range(3, x, 2):
+#             list_check_y.append(y)
+#             if x % y == 0:
+#                 x += 2
+#                 list_check_y.clear()
+#                 break
+#         else:
+#
+#             print(f'checking {x} by list y: {list_check_y}')
+#             list_check_y.clear()
+#             list_primes.append(x)
+#             x += 2
+#
+#     # print(list_check_x)
+#     print(list_primes)
+#     print(len(list_primes))
 
-spy_game([1, 2, 4, 0, 0, 9, 5, 0, 2, 4, 0, 5, 5])
-spy_game([1, 7, 0, 2, 4, 0, 5, 7])
-spy_game([1, 7, 2, 8, 2, 4, 8, 5, 7, 0, 4, 5, 0,0,7])
+# prime(20)
 
-spy_game_solution([1, 2, 4, 0, 0, 9, 5, 0, 2, 4, 0, 5, 5])
-spy_game_solution([1, 7, 0, 2, 4, 0, 5, 7])
-spy_game_solution([1, 7, 2, 8, 2, 4, 8, 5, 7, 0, 4, 5, 0,0,7])
+# def print_big(word):
+#     patterns = {1:'  *  ',2:' * * ',3:'*   *',4:'*****',5:'**** ',6:'   * ',7:' *   ',8:'*   * ',9:'*    '}
+#     alphabet = {'A':[1,2,4,3,3],'B':[5,3,5,3,5],'C':[4,9,9,9,4],'D':[5,3,3,3,5],'E':[4,9,4,9,4]}
+#     for letter in word:
+#         for pattern in alphabet[letter.upper()]:
+#             print(patterns[pattern])
+#
+#
+# print_big('abcd')
+#
+# list_s = [1, 2, 4, 0, 0, 9, 5, 0, 2, 4, 0, 5, 5]
+# #
+# def map_test(num):
+#     print(num**2)
+#
+#
+# # list(map(map_test, list_s))
+#
+# for item in map(map_test, list_s):
+#     print(item)
+
+my_nums = [1, 2, 3, 4, 5]
+# def square(num):
+#     print(num % 2 == 0)
+#
+#
+# list(filter(square, my_nums))
+
+result = list(map(lambda x: x ** 2,my_nums))
+print(result)
+
+animals = ['dog', 'cat', 'parrot', 'rabbit']
+
+print(list(map(lambda word: str.upper(word[0]) + str(word[1::]), animals)))
+
+# print(upper_first)
+
+# array = ['John','Cindy','Sarah','Kelly','Mike']
+#
+# def even(words):
+#     if len(words) % 2 == 0:
+#         print(words)
+#     else:
+#         print(words[0])
+#
+#
+# list(map(even, array))
+# list(filter(even, array))
+
+
