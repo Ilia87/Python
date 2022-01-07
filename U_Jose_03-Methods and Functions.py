@@ -133,25 +133,25 @@
 #
 # old_macdonald('macdonald')
 
-# def rev_t(text):
-#     text = "".join(reversed(text))
-#     print(text)
-# rev_t('We are ready')
+def rev_t(text):
+    text = "".join(reversed(text))
+    print(text)
+rev_t('We are ready')
+
+def rev_t1(text1):
+    text_list = list(text1.split(" "))
+    text_list.reverse()
+    print(' '.join(text_list))
+rev_t1('We are ready')
+
+def rev_t2(text2):
+    text2 = " ".join(text2.split()[::-1])
+    print(text2)
+rev_t2('We are ready')
 #
-# def rev_t1(text1):
-#     text_list = list(text1.split(" "))
-#     text_list.reverse()
-#     print(' '.join(text_list))
-# rev_t1('We are ready')
-#
-# def rev_t2(text2):
-#     text2 = " ".join(text2.split()[::-1])
-#     print(text2)
-# rev_t2('We are ready')
-# #
-# def almost_there(n):
-#     print (n > 10 and n < 100 or n>200)
-#     print((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
+def almost_there(n):
+    print (n > 10 and n < 100 or n>200)
+    print((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
 #
 # almost_there(209)
 
@@ -256,6 +256,11 @@
 #     print(10 < n < 100 or n > 200)
 # almost_there(201)
 
+#####################################################################################
+
+
+#### Given a list of ints, return True if the array contains a 3 next to a 3 somewhere.
+
 # list_c = [1, 3, 1, 3, 1, 7, 1, 3, 6, 7, 1, 3, 3, 3, 1, 3, 1, 6, 7, 1, 3, 3, 1, 6, 7, 9]
 
 # def has_33(list_1):
@@ -271,7 +276,10 @@
 #
 #
 # has_33(list_c)
-#
+######################################################################################
+
+
+#### PAPER DOLL: Given a string, return a string where for every character in the original there are three characters
 # def paper_doll(word):
 #     list_word=[]
 #     for l in word:
@@ -285,7 +293,13 @@
 #     print(word_doll3)
 #
 # paper_doll('Hello')
+######################################################################################
 
+
+#### BLACKJACK: Given three integers between 1 and 11,
+#### if their sum is less than or equal to 21, return their sum.
+#### If their sum exceeds 21 and there's an eleven, reduce the total sum by 10.
+#### Finally, if the sum (even after adjustment) exceeds 21, return 'BUST
 
 # tup1 = (5,6,7)
 # tup2 = (9,9,9)
@@ -309,12 +323,13 @@
 #     for n in array:
 #         if n <> 6
 
-# t = 'Pilaf'
-# def plof(text):
-#     text1 = text.capitalize()[::-1]
-#     print(text1)
-# # plof(t)
-#
+######################################################################################
+
+
+#### SUMMER OF '69: Return the sum of the numbers in the array,
+#### except ignore sections of numbers starting with a 6 and extending to the next 9
+#### (every 6 will be followed by at least one 9). Return 0 for no numbers.
+
 # list_1 = [4, 5, 6, 7, 8, 9, 45, 11, 6, 5, 9, 11, 2]
 #
 # def sum_69(array):
@@ -346,11 +361,6 @@
 # sum_69_1(list_1)
 
 
-
-#  Return the sum of the numbers in the array,
-#  except ignore sections of numbers starting
-#  with a 6 and extending to the next 9
-#  (every 6 will be followed by at least one 9). Return 0 for no numbers.
 # list_1 = [4, 5, 6, 7, 8, 9, 1, 11, 6, 5, 9, 11, 2]
 # def sum_69(array):
 #     list_sum =[]
@@ -376,9 +386,12 @@
 #
 # print(list_1)
 # sum_69(list_1)
+######################################################################################
 
-# SPY GAME: Write a function that takes in a list of integers
-# and returns True if it contains 007 in order
+
+#### SPY GAME: Write a function that takes in a list of integers
+#### and returns True if it contains 007 in order
+
 # def spy_game(nums):
 #     list_spy =[]
 #     check = 1
@@ -423,9 +436,11 @@
 # spy_game_solution([1, 2, 4, 0, 0, 9, 5, 0, 2, 4, 0, 'x', 5])
 # spy_game_solution([1, 7, 0, 2, 4, 0, 5, 7])
 # spy_game_solution([1, 7, 2, 8, 2, 4, 8, 5, 7, 0, 4, 5, 0,0,7])
+######################################################################################
 
-# COUNT PRIMES: Write a function that returns the number of prime numbers
-# that exist up to and including a given number
+
+#### COUNT PRIMES: Write a function that returns the number of prime numbers
+#### that exist up to and including a given number
 
 # def count_primes(one_num):
 #     list_nums = []
@@ -476,6 +491,10 @@ from typing import Dict, Any
 #     print(len(list_primes))
 
 # prime(20)
+######################################################################################
+
+
+#### PRINT BIG: Write a function that takes in a single letter, and returns a 5x5 representation of that letter
 
 # def print_big(word):
 #     patterns = {1:'  *  ',2:' * * ',3:'*   *',4:'*****',5:'**** ',6:'   * ',7:' *   ',8:'*   * ',9:'*    '}
@@ -486,7 +505,9 @@ from typing import Dict, Any
 #
 #
 # print_big('abcd')
-#
+#######################################################################################
+
+
 # list_s = [1, 2, 4, 0, 0, 9, 5, 0, 2, 4, 0, 5, 5]
 # #
 # def map_test(num):
@@ -498,19 +519,19 @@ from typing import Dict, Any
 # for item in map(map_test, list_s):
 #     print(item)
 
-my_nums = [1, 2, 3, 4, 5]
-# def square(num):
-#     print(num % 2 == 0)
+# my_nums = [1, 2, 3, 4, 5]
+# # def square(num):
+# #     print(num % 2 == 0)
+# #
+# #
+# # list(filter(square, my_nums))
 #
+# result = list(map(lambda x: x ** 2,my_nums))
+# print(result)
 #
-# list(filter(square, my_nums))
-
-result = list(map(lambda x: x ** 2,my_nums))
-print(result)
-
-animals = ['dog', 'cat', 'parrot', 'rabbit']
-
-print(list(map(lambda word: str.upper(word[0]) + str(word[1::]), animals)))
+# animals = ['dog', 'cat', 'parrot', 'rabbit']
+#
+# print(list(map(lambda word: str.upper(word[0]) + str(word[1::]), animals)))
 
 # print(upper_first)
 
