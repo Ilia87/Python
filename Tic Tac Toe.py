@@ -11,8 +11,21 @@ board = ['#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 display_board(board)
 
 
-def player_x_o():
-    choice
-    player1 = input('Do you want to be X or O: ')
-    print()
+def player_input():
+    choice = 'wrong'
+    while choice not in ['X', 'O']:
+        choice = input('Player1: Do you want to be X or O: ')
+        if choice not in ['X', 'O']:
+            print("Sorry, I didn't understand. Please make sure to choose X or O.")
+    if choice == 'X':
+        print("Player1 will be first")
+        return 'X'
+    elif choice == 'O':
+        print("Player1 will be second")
+        return 'O'
+
+
+player_input()
+
+
 
