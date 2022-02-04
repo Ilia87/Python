@@ -44,10 +44,8 @@ def position_choice():
             if int(choice) in range(5):
                 with_range = True
             else:
-                clear_output()
                 print(f'Sorry "{choice}" is not a valid position (0-4)')
                 within_range = False
-    clear_output()
     return int(choice)
 
 def replacement_choice(game_list, position):
