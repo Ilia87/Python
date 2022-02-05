@@ -88,3 +88,25 @@ while game_on == True:
 
     # Ask if you want to keep playing
     game_on = gameon_choice()
+
+# def place_marker(board, marker, position):
+#     position = 'wrong'
+#     with_range = False
+#     while position == 'wrong' or with_range == False:
+#         position = input('Pick a position to replace (1-9): ')
+#         if position.isdigit() == False:
+#             print(f'Sorry "{position}" is not a number')
+#         elif position.isdigit() == True:
+#             if int(position) in range(1,10):
+#                 with_range = True
+#             else:
+#                 print(f'Sorry "{position}" is not a valid position (1-9)')
+#                 with_range = False
+#     board[int(position)] = marker
+#
+#
+#     print(position)
+#     print(board)
+#     return(board)
+#
+# place_marker(board,'$',7)
