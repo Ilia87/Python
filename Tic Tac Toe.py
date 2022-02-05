@@ -1,6 +1,3 @@
-
-
-
 #### Step 1: Write a function that can print out a board.
 #### Set up your board as a list, where each index 1-9 corresponds
 #### with a number on a number pad, so you get a 3 by 3 board representation.
@@ -15,10 +12,6 @@ def display_board(board):
     print('-' * 5)
     print(board[1] + '|' + board[2] + '|' + board[3])
     print(' ' * 5)
-
-
-# display_board(board)
-
 
 
 #### Step 2: Write a function that can take in a player input
@@ -38,15 +31,11 @@ def player_input():
     return player1, player2
 
 
-# player_input()
-
-
 #### Step 3: a function that takes in the board list object, a marker ('X' or 'O'),
 #### and a desired position (number 1-9) and assigns it to the board.
 
 def place_marker(board, marker, position):
     board[position] = marker
-
 
 
 #### Step 4: a function that takes in a board and a mark (X or O)
@@ -63,8 +52,6 @@ def win_check(board, mark):
            board[3] == board[5] == board[7] == mark
 
 
-# win_check(board, 'X')
-
 #### Step 5: Write a function that uses the random module to randomly decide
 #### which player goes first. You may want to lookup random.randint()
 #### Return a string of which player went first.
@@ -78,17 +65,11 @@ def choose_first():
         return 'player2'
 
 
-#choose_first()
-
-
 #### Step 6: Write a function that returns a boolean indicating
 #### whether a space on the board is freely available.
 
 def space_check(board, position):
     return board[position] == ' '
-
-
-# space_check(board,9)
 
 
 #### Step 7: Write a function that checks if the board is full
@@ -98,8 +79,6 @@ def full_board_check(board):
     check = ' ' not in (marks for marks in board)
     return check
 
-
-#full_board_check(board)
 
 #### Step 8: Write a function that asks for a player's next position (as a number 1-9)
 #### and then uses the function from step 6 to check if it's a free position.
@@ -121,7 +100,8 @@ def player_choice(board):
                     with_range = False
         return position
 
-
+#### Step 9: function that asks the player if they want to play again
+#### and returns a boolean True if they do want to play again.
 def replay():
     replay_game = input('do you wanna play again, y or n:')
     if replay_game == 'y':
@@ -129,7 +109,7 @@ def replay():
     else:
         return False
 
-
+##################GAME################
 print('Welcome to Tic Tac Toe!')
 
 while True:
