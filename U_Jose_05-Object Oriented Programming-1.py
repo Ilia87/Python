@@ -247,55 +247,6 @@
 # print(c.Area())
 
 
-class Account:
-    def __init__(self, owner, balance, password=1111):
-        self.owner = owner
-        self.balance = balance
-        self.password = password
-
-    def deposit(self):
-        dep_amount = int(input('Please, enter the amount of your deposit: '))
-        self.balance += dep_amount
-        print(f' You have deposited {dep_amount}rub. Your balance is {self.balance}rub.')
-        return self.balance
-
-    def withdraw(self):
-        dep_amount = int(input('Please, enter the amount of your withdraw: '))
-        self.balance -= dep_amount
-        print(f' You have withdrawn {dep_amount}rub. Your balance is {self.balance}rub.')
-        return self.balance
-
-    def checking_balance(self):
-        if self.balance > 0:
-            return True
-        else:
-            return False
-
-    def finish(self):
-        finish_operations = input(f'{self.owner}, do you wanna finish operations with your account, y or n:')
-        if finish_operations == 'y':
-            return True
-        else:
-            return False
 
 
 
-acct1 = Account('Ilya', 100)
-
-print('Welcome to the Bank')
-
-while True:
-    name = input('Please, enter name: ')
-    password = input('Please, enter password: ')
-    while True:
-        if name == acct1.owner and password == acct1.password:
-            operation = True
-        else:
-            operation = False
-
-
-print('Account owner: ', acct1.owner, '\n'
-      'Account balance:', acct1.balance)
-
-acct1.deposit()
-acct1.withdraw()

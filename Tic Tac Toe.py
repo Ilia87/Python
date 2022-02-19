@@ -155,5 +155,5 @@ while True:
                 turn = 'player1'
 
     if not replay():
-        print('Bay!')
+        print('Goodbye!')
         break
