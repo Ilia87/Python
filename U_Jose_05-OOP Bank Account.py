@@ -14,6 +14,9 @@ class Account:
         self.balance = balance
         self.password = password
 
+    def __str__(self):
+        return f'Account owner:   {self.owner}\nAccount balance: ${self.balance}'
+
     def deposit(self):
         dep_amount = int(input('Please, enter the amount of your deposit: '))
         self.balance += dep_amount
@@ -28,7 +31,6 @@ class Account:
             self.balance -= dep_amount
             print(f' You have withdrawn {dep_amount}rub. Your balance is {self.balance}rub.')
             return self.balance
-
 
     def checking_balance(self):
         if self.balance > 0:
