@@ -127,7 +127,7 @@ while True:
     while game_on:
         if turn == 'player1':
             display_board(board)
-            position = player_choice(board)
+            position = int(player_choice(board))
             place_marker(board, player1_marker, position)
             if win_check(board, player1_marker):
                 display_board(board)
@@ -141,7 +141,7 @@ while True:
                 turn = 'player2'
         else:
             display_board(board)
-            position = player_choice(board)
+            position = int(player_choice(board))
             place_marker(board, player2_marker, position)
             if win_check(board, player2_marker):
                 display_board(board)
