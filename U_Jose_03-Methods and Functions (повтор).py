@@ -21,11 +21,40 @@
 # animal_crackers('Levelheaded Llama') --> True
 # animal_crackers('Crazy Kangaroo') --> False
 
-def animal_crackers(text):
-    words = [i for i in text.split(" ")]
-    if words[0][0] == words[1][0]:
-        print(True)
-    else:
-        print(False)
+# def animal_crackers(text):
+#      words = [i for i in text.split(" ")]
+#     if words[0][0] == words[1][0]:
+#         print(True)
+#     else:
+#         print(False)
+#
+# animal_crackers('GFWG Gdw')
 
-animal_crackers('fFWG Gdw')
+
+# MAKES TWENTY: Given two integers, return True if the sum of the integers is 20 or if one of the
+# integers is 20. If not, return False
+
+# def sum(a, b):
+#     if a + b == 20 or a == 20 or b == 20:
+#         print(True)
+#     else:
+#         print(False)
+#
+# sum(3, 20)
+
+# OLD MACDONALD: Write a function that capitalizes the first and fourth letters of a name
+# old_macdonald('macdonald') --> MacDonald
+
+def cap_letters(word):
+    lst_letters = list(word)
+    lst_cap = ''
+    for l in lst_letters:
+        if lst_letters.index(l) == 0 or lst_letters.index(l) == 3:
+            lst_cap += l.upper()
+        else:
+            lst_cap += l
+
+    print(lst_cap)
+
+
+cap_letters('macdonald')
