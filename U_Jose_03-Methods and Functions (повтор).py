@@ -45,16 +45,28 @@
 # OLD MACDONALD: Write a function that capitalizes the first and fourth letters of a name
 # old_macdonald('macdonald') --> MacDonald
 
+
 def cap_letters(word):
     lst_letters = list(word)
     lst_cap = ''
     for l in lst_letters:
         if lst_letters.index(l) == 0 or lst_letters.index(l) == 3:
             lst_cap += l.upper()
-        else:
+        elif lst_letters.index(l) != 0 or lst_letters.index(l) != 3:
             lst_cap += l
-
     print(lst_cap)
+    for pos, letter in enumerate(lst_letters):
+        print(f"{letter}: {pos}")
+    letter_enum = enumerate(lst_letters)
+    print(list(letter_enum))
+    lst_cap_second = ''
+    for i in letter_enum:
+        for n in range(len(i)):
+            if i[n][0] == 0:
+                lst_cap_second += i[n][1].upper()
+            else:
+                lst_cap_second += i[n][1]
+        print(lst_cap_second)
 
 
-cap_letters('macdonald')
+cap_letters('макдоналдм')
