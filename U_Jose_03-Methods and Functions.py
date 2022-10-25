@@ -112,17 +112,18 @@
 #
 # check(55555555555555555,20)
 
-# def old_macdonald(name):
-# new_name = ''
-# list_mac = list(name)
-# list_mac.pop(3)
-# list_mac.insert(3,"D")
-# list_mac.pop(0)
-# list_mac.insert(0,"M")
-# for l in list_mac:
-#     new_name +=l
-# print(new_name)
+def old_macdonald(name):
+    new_name = ''
+    list_mac = list(name)
+    list_mac.pop(3)
+    list_mac.insert(3,"D")
+    list_mac.pop(0)
+    list_mac.insert(0,"M")
+    for l in list_mac:
+        new_name +=l
+    print(new_name)
 
+old_macdonald('macdonald')
 # def old_macdonald(name):
 #     if len(name)>4:
 #         print(name[:3].capitalize() + name[3:].capitalize())
@@ -133,25 +134,25 @@
 #
 # old_macdonald('macdonald')
 
-def rev_t(text):
-    text = "".join(reversed(text))
-    print(text)
-rev_t('We are ready')
-
-def rev_t1(text1):
-    text_list = list(text1.split(" "))
-    text_list.reverse()
-    print(' '.join(text_list))
-rev_t1('We are ready')
-
-def rev_t2(text2):
-    text2 = " ".join(text2.split()[::-1])
-    print(text2)
-rev_t2('We are ready')
+# def rev_t(text):
+#     text = "".join(reversed(text))
+#     print(text)
+# rev_t('We are ready')
 #
-def almost_there(n):
-    print (n > 10 and n < 100 or n>200)
-    print((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
+# def rev_t1(text1):
+#     text_list = list(text1.split(" "))
+#     text_list.reverse()
+#     print(' '.join(text_list))
+# rev_t1('We are ready')
+#
+# def rev_t2(text2):
+#     text2 = " ".join(text2.split()[::-1])
+#     print(text2)
+# rev_t2('We are ready')
+# #
+# def almost_there(n):
+#     print (n > 10 and n < 100 or n>200)
+#     print((abs(100 - n) <= 10) or (abs(200 - n) <= 10))
 #
 # almost_there(209)
 
@@ -459,8 +460,8 @@ def almost_there(n):
 #     print(list_nums_prime)
 #     print(len(list_nums_prime))
 #     print(count_el)
-#
-#
+# #
+# #
 # count_primes(100)
 from typing import Dict, Any
 

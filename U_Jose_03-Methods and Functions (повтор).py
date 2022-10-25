@@ -46,27 +46,59 @@
 # old_macdonald('macdonald') --> MacDonald
 
 
-def cap_letters(word):
-    lst_letters = list(word)
-    lst_cap = ''
-    for l in lst_letters:
-        if lst_letters.index(l) == 0 or lst_letters.index(l) == 3:
-            lst_cap += l.upper()
-        elif lst_letters.index(l) != 0 or lst_letters.index(l) != 3:
-            lst_cap += l
-    print(lst_cap)
-    for pos, letter in enumerate(lst_letters):
-        print(f"{letter}: {pos}")
-    letter_enum = enumerate(lst_letters)
-    print(list(letter_enum))
-    lst_cap_second = ''
-    for i in letter_enum:
-        for n in range(len(i)):
-            if i[n][0] == 0:
-                lst_cap_second += i[n][1].upper()
-            else:
-                lst_cap_second += i[n][1]
-        print(lst_cap_second)
+# def cap_letters(word):
+#     lst_letters = list(word)
+#     lst_cap = ''
+#     for index, l in enumerate(lst_letters):
+#         if index == 0 or index == 3:
+#             lst_cap += l.upper()
+#         else:
+#             lst_cap += l
+#     print(lst_cap)
+#
+# cap_letters('макдоналдм')
 
 
-cap_letters('макдоналдм')
+# MASTER YODA: Given a sentence, return a sentence with the words reversed
+# # master_yoda('I am home') --> 'home am I'
+# # master_yoda('We are ready') --> 'ready are We'
+
+def master_yoda_1(text):
+    lst_text = list(text.split(" "))
+    lst_text.reverse()
+    str_text = " ".join(lst_text)
+    print(str_text)
+def master_yoda_2(text):
+    lst_text = list(text.split(" "))
+    str_text = " ".join(reversed(lst_text))
+    print(str_text)
+
+def master_yoda_3(text):
+    lst_text = list(text.split(" "))
+    str_text = " ".join(lst_text[::-1])
+    print(str_text)
+
+def master_yoda_4(text):
+    lst_text = list(text.split(" "))
+    str_text = ''
+    for n in range(len(lst_text)-1, -1, -1):
+        str_text += lst_text[n]
+        str_text += " "
+    print(str_text)
+
+def master_yoda_5(text):
+    lst_text = list(text.split(" "))
+    lst_text_rev = []
+    for n in range(len(lst_text)-1, -1, -1):
+        lst_text_rev.append(lst_text[n])
+    str_text = " ".join(lst_text_rev)
+    print(str_text)
+
+
+example = 'Я накидала на тебя волос, как мой кот на меня кидает'
+master_yoda_1(example)
+master_yoda_2(example)
+master_yoda_3(example)
+master_yoda_4(example)
+master_yoda_5(example)
+
