@@ -94,6 +94,16 @@ def master_yoda_5(text):
     str_text = " ".join(lst_text_rev)
     print(str_text)
 
+def master_yoda_6(text):
+    lst_text = list(text.split(" "))        
+
+def master_yoda_6_tmp(lst_text):
+    if len(lst_text) == 1:
+        return lst_text
+    else:
+        return str(lst_text[-1]) + " " + str(master_yoda_6_tmp(lst_text[:-1]))
+
+
 
 example = 'Я накидала на тебя волос, как мой кот на меня кидает'
 master_yoda_1(example)
@@ -101,4 +111,6 @@ master_yoda_2(example)
 master_yoda_3(example)
 master_yoda_4(example)
 master_yoda_5(example)
-
+master_yoda_6(example)
+example2 = ['Я', 'накидала', 'на', 'тебя', 'волос,', 'как', 'мой', 'кот', 'на', 'меня','кидает']
+master_yoda_6_tmp(example)
